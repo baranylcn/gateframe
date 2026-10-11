@@ -7,7 +7,7 @@ Thank you for your interest in contributing. This document covers how to set up 
 ## Dev setup
 
 ```bash
-git clone https://github.com/practicalmind-ai/gateframe.git
+git clone https://github.com/baranylcn/gateframe.git
 cd gateframe
 pip install -e ".[dev]"
 python -m pytest tests/ -v

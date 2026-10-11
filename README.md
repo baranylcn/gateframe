@@ -1,6 +1,6 @@
 # Gateframe
 
-[![CI](https://github.com/PracticalMind/gateframe/actions/workflows/ci.yml/badge.svg)](https://github.com/PracticalMind/gateframe/actions/workflows/ci.yml)
+[![CI](https://github.com/baranylcn/gateframe/actions/workflows/ci.yml/badge.svg)](https://github.com/baranylcn/gateframe/actions/workflows/ci.yml)
 [![PyPI](https://img.shields.io/pypi/v/gateframe)](https://pypi.org/project/gateframe/)
 [![Python](https://img.shields.io/pypi/pyversions/gateframe)](https://pypi.org/project/gateframe/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
@@ -242,7 +242,7 @@ pip install gateframe
 For development:
 
 ```bash
-git clone https://github.com/practicalmind-ai/gateframe.git
+git clone https://github.com/baranylcn/gateframe.git
 cd gateframe
 pip install -e ".[dev]"
 python -m pytest tests/ -v

@@ -21,7 +21,7 @@ Examples of unacceptable behavior:
 
 ## Enforcement
 
-Instances of unacceptable behavior may be reported via [GitHub Security Advisories](https://github.com/PracticalMind/gateframe/security/advisories/new). All complaints will be reviewed promptly and confidentially.
+Instances of unacceptable behavior may be reported via [GitHub Security Advisories](https://github.com/baranylcn/gateframe/security/advisories/new). All complaints will be reviewed promptly and confidentially.
 
 Maintainers who do not follow or enforce this Code of Conduct may face temporary or permanent repercussions as determined by other members of the project's leadership.
 

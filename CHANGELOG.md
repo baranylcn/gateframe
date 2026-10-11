@@ -36,6 +36,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Structured audit logging for validation events
 - GitHub Actions CI with ruff lint and pytest matrix (Python 3.10–3.13)
 
-[Unreleased]: https://github.com/PracticalMind/gateframe/compare/v0.2.0...HEAD
-[0.2.0]: https://github.com/PracticalMind/gateframe/compare/v0.1.0...v0.2.0
-[0.1.0]: https://github.com/PracticalMind/gateframe/releases/tag/v0.1.0
+[Unreleased]: https://github.com/baranylcn/gateframe/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/baranylcn/gateframe/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/baranylcn/gateframe/releases/tag/v0.1.0

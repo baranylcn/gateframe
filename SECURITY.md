@@ -9,7 +9,7 @@
 
 ## Reporting a vulnerability
 
-Use [GitHub's private vulnerability reporting](https://github.com/PracticalMind/gateframe/security/advisories/new) to submit a report. Do not open a public issue.
+Use [GitHub's private vulnerability reporting](https://github.com/baranylcn/gateframe/security/advisories/new) to submit a report. Do not open a public issue.
 
 Include a description of the issue, steps to reproduce, and the version affected. You will receive a response within 7 days.
 
