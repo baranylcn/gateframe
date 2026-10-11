@@ -20,11 +20,13 @@ from gateframe import (
     FailureMode,
 )
 
+
 class TriageDecision(BaseModel):
     action: str
     priority: str
     confidence: float
     rationale: str
+
 
 contract = ValidationContract(
     name="triage_decision",
@@ -39,14 +41,16 @@ contract = ValidationContract(
     ],
 )
 
-result = contract.validate({
-    "action": "prescribe",       # not in allowed set -> HARD_FAIL
-    "priority": "high",
-    "confidence": 0.52,          # below 0.7 -> SOFT_FAIL
-    "rationale": "...",
-})
+result = contract.validate(
+    {
+        "action": "prescribe",  # not in allowed set -> HARD_FAIL
+        "priority": "high",
+        "confidence": 0.52,  # below 0.7 -> SOFT_FAIL
+        "rationale": "...",
+    }
+)
 
-print(result.passed)             # False
+print(result.passed)  # False
 for failure in result.failures:
     print(f"[{failure.failure_mode.value}] {failure.rule_name}: {failure.message}")
 # [hard_fail] action_boundary: Action must be one of: treat, observe, refer, discharge.
@@ -134,8 +138,8 @@ result2 = contract_step2.validate(output2)
 ctx.update(result2)
 audit.record(result2, workflow_context=ctx)
 
-print(ctx.confidence)           # degraded from 1.0 by soft failures
-print(ctx.threshold_breached)   # True if confidence < escalation_threshold
+print(ctx.confidence)  # degraded from 1.0 by soft failures
+print(ctx.threshold_breached)  # True if confidence < escalation_threshold
 
 if ctx.threshold_breached:
     escalation = router.route_threshold_breach(ctx)
@@ -151,21 +155,25 @@ gateframe validates outputs from any provider. Integrations are thin wrappers, g
 ```python
 # OpenAI
 from gateframe.integrations.openai import OpenAIValidator
+
 validator = OpenAIValidator(contract, parse_json=True)
 result = validator.validate(openai_completion)
 
 # Anthropic
 from gateframe.integrations.anthropic import AnthropicValidator
+
 validator = AnthropicValidator(contract, parse_json=True)
 result = validator.validate(anthropic_message)
 
 # LiteLLM
 from gateframe.integrations.litellm import LiteLLMValidator
+
 validator = LiteLLMValidator(contract, parse_json=True)
 result = validator.validate(litellm_response)
 
 # LangChain
 from gateframe.integrations.langchain import LangChainValidator
+
 validator = LangChainValidator(contract, parse_json=False)
 result = validator.validate(chain_output)
 ```
